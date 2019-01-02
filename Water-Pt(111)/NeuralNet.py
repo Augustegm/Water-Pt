@@ -17,7 +17,7 @@ import sys
 import pickle
 
 #The script belows fits the force components for the H-atoms in dataset.traj. To modify it for fitting O and Pt components, read the comments below. 
-
+#Also, please note that the uploaded dataset dataset.traj only contains the first 1000 images of the full data set described in the report. This is due to file size limitations on GitHub.
 
 ############## OPTIONS #############
 #Data set sizes
@@ -47,7 +47,7 @@ weight_decay = 0 #Weight decay when using regularization
 
 #Training images
 if Random == True:
-    indices = random.sample(range(50000), N_train+N_valid)
+    indices = random.sample(range(1000), N_train+N_valid) #due to file limitations dataset.traj contains only the first 1000 images of the original data set.
     images = []
     for index in indices:
         image = read('../dataset.traj', index = index)
