@@ -47,7 +47,7 @@ weight_decay = 0 #Weight decay when using regularization
 
 #Training images
 if Random == True:
-    indices = random.sample(range(1000), N_train+N_valid) #due to file limitations dataset.traj contains only the first 1000 images of the original data set.
+    indices = random.sample(range(1000), N_train+N_valid) #due to file size limitations dataset.traj contains only the first 1000 images of the original data set.
     images = []
     for index in indices:
         image = read('../dataset.traj', index = index)
